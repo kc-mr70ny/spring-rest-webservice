@@ -1,4 +1,4 @@
-package com.tony.rest.webservice.springrestwebservice.User;
+package com.tony.rest.webservice.springrestwebservice.user;
 
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
@@ -43,7 +43,7 @@ public class UserResource {
     }
 
     @PostMapping("/users")
-    public ResponseEntity CreateUser(@Valid @RequestBody User user){
+    public ResponseEntity<User> CreateUser(@Valid @RequestBody User user){
         User savedUser = service.save(user);
         URI location = ServletUriComponentsBuilder
                 .fromCurrentRequest()
@@ -53,7 +53,7 @@ public class UserResource {
     }
 
     @DeleteMapping("/users/{id}")
-    public ResponseEntity deleteUser(@PathVariable int id){
+    public ResponseEntity<User> deleteUser(@PathVariable int id){
         User user = service.deleteUserById(id);
         if(user == null){
             throw new UserNotFoundException("id-"+id);

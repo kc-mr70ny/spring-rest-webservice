@@ -1,4 +1,4 @@
-package com.tony.rest.webservice.springrestwebservice.User;
+package com.tony.rest.webservice.springrestwebservice.user;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

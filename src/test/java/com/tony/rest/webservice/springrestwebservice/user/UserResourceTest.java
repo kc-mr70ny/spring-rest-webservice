@@ -1,4 +1,4 @@
-package com.tony.rest.webservice.springrestwebservice.User;
+package com.tony.rest.webservice.springrestwebservice.user;
 
 import static io.restassured.http.ContentType.JSON;
 import static org.junit.jupiter.api.Assertions.assertEquals;

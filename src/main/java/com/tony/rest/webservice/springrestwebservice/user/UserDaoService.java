@@ -1,4 +1,4 @@
-package com.tony.rest.webservice.springrestwebservice.User;
+package com.tony.rest.webservice.springrestwebservice.user;
 
 import org.springframework.stereotype.Component;
 
@@ -9,7 +9,7 @@ import java.util.List;
 
 @Component
 public class UserDaoService {
-    private static List<User> users = new ArrayList<>();
+    private static final List<User> users = new ArrayList<>();
     private static int usersCount = 3;
 
     static {
